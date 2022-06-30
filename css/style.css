@@ -1043,9 +1043,9 @@ body._lock-scroll {
   padding-left: 15px;
   padding-right: 15px;
   /* Если меньше контейнера */
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   position: relative;
-  background-color: #e4e4e4;
+  background-color: #222;
 }
 
 @media (max-width: 800px) {
@@ -1056,7 +1056,7 @@ body._lock-scroll {
 
 @media (max-width: 800px) {
   .footer-top__body {
-    padding-bottom: calc(15px + 5 * ((100vw - 320px) / 480));
+    padding-bottom: calc(10px + 5 * ((100vw - 320px) / 480));
   }
 }
 
@@ -1077,7 +1077,7 @@ body._lock-scroll {
   /* Если меньше контейнера */
   font-size: 36px;
   line-height: 131.25%;
-  color: #222;
+  color: #fff;
 }
 
 @media (max-width: 800px) {
@@ -1135,7 +1135,7 @@ body._lock-scroll {
   /* Если меньше контейнера */
   font-size: 16px;
   line-height: 137.5%;
-  color: #222;
+  color: #fff;
 }
 
 @media (max-width: 800px) {
@@ -1145,7 +1145,7 @@ body._lock-scroll {
 }
 
 .footer-top__item a {
-  color: #924b00;
+  color: #f07e02;
 }
 
 @media (any-hover: hover) {
@@ -1189,7 +1189,7 @@ body._lock-scroll {
 
 .footer-main__body {
   /* Если меньше контейнера */
-  padding-top: 20px;
+  padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   /* Если меньше контейнера */
@@ -1205,14 +1205,13 @@ body._lock-scroll {
           align-items: center;
   position: relative;
   z-index: 2;
-  -webkit-box-shadow: 0px 0px 10px 2px #222;
-          box-shadow: 0px 0px 10px 2px #222;
+  border-top: 1px solid #444444;
   background-color: #222;
 }
 
 @media (max-width: 800px) {
   .footer-main__body {
-    padding-top: calc(15px + 5 * ((100vw - 320px) / 480));
+    padding-top: calc(10px + 5 * ((100vw - 320px) / 480));
   }
 }
 
