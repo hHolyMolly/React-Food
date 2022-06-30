@@ -323,7 +323,7 @@ body._lock-scroll {
           align-items: flex-start;
   position: relative;
   overflow: hidden;
-  background-color: #f07e02;
+  background: linear-gradient(76.02deg, #eb8211 1.66%, #d89349 93.21%);
 }
 
 @media (max-width: 800px) {
