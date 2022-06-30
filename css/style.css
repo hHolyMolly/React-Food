@@ -311,11 +311,6 @@ body._lock-scroll {
   }
 }
 
-.page {
-  -webkit-box-shadow: 0px 0px 20px #616161;
-          box-shadow: 0px 0px 20px #616161;
-}
-
 .main-block__body {
   /* Если меньше контейнера */
   padding-top: 30px;
