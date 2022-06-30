@@ -313,11 +313,11 @@ body._lock-scroll {
 
 .main-block__body {
   /* Если меньше контейнера */
-  padding-top: 30px;
+  padding-top: 20px;
   padding-left: 15px;
   padding-right: 15px;
   /* Если меньше контейнера */
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,13 +334,13 @@ body._lock-scroll {
 
 @media (max-width: 800px) {
   .main-block__body {
-    padding-top: calc(20px + 10 * ((100vw - 320px) / 480));
+    padding-top: calc(15px + 5 * ((100vw - 320px) / 480));
   }
 }
 
 @media (max-width: 800px) {
   .main-block__body {
-    padding-bottom: calc(20px + 40 * ((100vw - 320px) / 480));
+    padding-bottom: calc(15px + 5 * ((100vw - 320px) / 480));
   }
 }
 
@@ -538,25 +538,13 @@ body._lock-scroll {
   }
 }
 
-.banner {
-  position: relative;
-  z-index: 2;
-  -webkit-box-shadow: 0px 0px 20px rgba(46, 46, 46, 0.788);
-          box-shadow: 0px 0px 20px rgba(46, 46, 46, 0.788);
-}
-
-.banner__image {
-  padding-bottom: 25%;
-  overflow: hidden;
-}
-
 .about__body {
   /* Если меньше контейнера */
-  padding-top: 40px;
+  padding-top: 20px;
   padding-left: 15px;
   padding-right: 15px;
   /* Если меньше контейнера */
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   position: relative;
   overflow: hidden;
   background-color: #222;
@@ -564,13 +552,13 @@ body._lock-scroll {
 
 @media (max-width: 800px) {
   .about__body {
-    padding-top: calc(20px + 20 * ((100vw - 320px) / 480));
+    padding-top: calc(15px + 5 * ((100vw - 320px) / 480));
   }
 }
 
 @media (max-width: 800px) {
   .about__body {
-    padding-bottom: calc(20px + 10 * ((100vw - 320px) / 480));
+    padding-bottom: calc(15px + 5 * ((100vw - 320px) / 480));
   }
 }
 
