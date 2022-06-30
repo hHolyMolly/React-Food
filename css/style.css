@@ -284,15 +284,15 @@ body._lock-scroll {
       -ms-flex-positive: 0;
           flex-grow: 0;
   /* Если меньше контейнера */
-  -ms-flex-preferred-size: 230px;
-      flex-basis: 230px;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
   position: relative;
 }
 
 @media (max-width: 800px) {
   .header__logo {
-    -ms-flex-preferred-size: calc(200px + 30 * ((100vw - 320px) / 480));
-        flex-basis: calc(200px + 30 * ((100vw - 320px) / 480));
+    -ms-flex-preferred-size: calc(220px + 80 * ((100vw - 320px) / 480));
+        flex-basis: calc(220px + 80 * ((100vw - 320px) / 480));
   }
 }
 
@@ -348,12 +348,12 @@ body._lock-scroll {
       -ms-flex-align: center;
           align-items: center;
   /* Если меньше контейнера */
-  font-size: 20px;
+  font-size: 24px;
 }
 
 @media (max-width: 800px) {
   .header-phone__icon {
-    font-size: calc(16px + 4 * ((100vw - 320px) / 480));
+    font-size: calc(18px + 6 * ((100vw - 320px) / 480));
   }
 }
 
@@ -373,12 +373,12 @@ body._lock-scroll {
 
 .header-phone__text {
   /* Если меньше контейнера */
-  font-size: 20px;
+  font-size: 22px;
 }
 
 @media (max-width: 800px) {
   .header-phone__text {
-    font-size: calc(16px + 4 * ((100vw - 320px) / 480));
+    font-size: calc(16px + 6 * ((100vw - 320px) / 480));
   }
 }
 
@@ -701,13 +701,19 @@ body._lock-scroll {
   position: relative;
 }
 
+@media (max-width: 768.2px) {
+  .about__image {
+    display: none;
+  }
+}
+
 .about__image:before {
   content: "";
-  width: 170px;
-  height: 150px;
+  width: 150px;
+  height: 90px;
   position: absolute;
-  top: 5px;
-  left: 40px;
+  top: 10px;
+  left: 20px;
   background-image: url("../img/page/about/e-01.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -820,7 +826,8 @@ body._lock-scroll {
   position: absolute;
   top: 11px;
   left: 0;
-  background-color: #fff;
+  z-index: 2;
+  background-color: #f07e02;
 }
 
 .about__item:not(:last-child) {
