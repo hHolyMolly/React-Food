@@ -389,6 +389,42 @@ body._lock-scroll {
     width: 40px;
     height: 40px;
     font-size: 28px;
+    -webkit-animation-name: animationBtn;
+            animation-name: animationBtn;
+    -webkit-animation-duration: 1.2s;
+            animation-duration: 1.2s;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes animationBtn {
+    0% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    50% {
+      -webkit-transform: translateY(4px);
+              transform: translateY(4px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+  }
+  @keyframes animationBtn {
+    0% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    50% {
+      -webkit-transform: translateY(4px);
+              transform: translateY(4px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
   }
 }
 
@@ -667,7 +703,7 @@ body._lock-scroll {
 
 @media (max-width: 800px) {
   .categories__link {
-    font-size: calc(15px + 3 * ((100vw - 320px) / 480));
+    font-size: calc(12px + 6 * ((100vw - 320px) / 480));
   }
 }
 
@@ -683,7 +719,7 @@ body._lock-scroll {
 
 @media (max-width: 800px) {
   .categories__link:not(:last-child) {
-    margin-right: calc(10px + 15 * ((100vw - 320px) / 480));
+    margin-right: calc(5px + 20 * ((100vw - 320px) / 480));
   }
 }
 
@@ -1123,19 +1159,19 @@ body._lock-scroll {
 
 @media (max-width: 800px) {
   .offer-column__image {
-    padding: calc(20px + 12 * ((100vw - 320px) / 480));
+    padding: calc(15px + 17 * ((100vw - 320px) / 480));
   }
 }
 
 @media (max-width: 800px) {
   .offer-column__image {
-    width: calc(100px + 40 * ((100vw - 320px) / 480));
+    width: calc(70px + 70 * ((100vw - 320px) / 480));
   }
 }
 
 @media (max-width: 800px) {
   .offer-column__image {
-    height: calc(100px + 40 * ((100vw - 320px) / 480));
+    height: calc(70px + 70 * ((100vw - 320px) / 480));
   }
 }
 
@@ -1158,7 +1194,7 @@ body._lock-scroll {
 
 @media (max-width: 800px) {
   .offer-column__text {
-    font-size: calc(14px + 2 * ((100vw - 320px) / 480));
+    font-size: calc(13px + 3 * ((100vw - 320px) / 480));
   }
 }
 
