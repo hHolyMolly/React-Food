@@ -1,0 +1,27 @@
+import React from 'react';
+
+import { phone, timeToWork } from '../../global';
+
+function Banner() {
+	return (
+		<div className="banner">
+			<div className="banner__container _container">
+				<div className="banner__body">
+					<a className="banner__phone banner-phone" href={`tel:+${phone}`}>
+						<i className="banner-phone__icon">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M3 2H7L9 7L6.5 8.5C7.57096 10.6715 9.32847 12.429 11.5 13.5L13 11L18 13V17C18 17.5304 17.7893 18.0391 17.4142 18.4142C17.0391 18.7893 16.5304 19 16 19C12.0993 18.763 8.42015 17.1065 5.65683 14.3432C2.8935 11.5798 1.23705 7.90074 1 4C1 3.46957 1.21071 2.96086 1.58579 2.58579C1.96086 2.21071 2.46957 2 3 2Z" strokeLinecap="round" strokeLinejoin="round" />
+								<path d="M13 5C13.5304 5 14.0391 5.21071 14.4142 5.58579C14.7893 5.96086 15 6.46957 15 7" strokeLinecap="round" strokeLinejoin="round" />
+								<path d="M13 1C14.5913 1 16.1174 1.63214 17.2426 2.75736C18.3679 3.88258 19 5.4087 19 7" strokeLinecap="round" strokeLinejoin="round" />
+							</svg>
+						</i>
+						<span className="banner-phone__text">+{phone}</span>
+					</a>
+					<p className="banner__work">{timeToWork}</p>
+				</div>
+			</div>
+		</div>
+	);
+}
+
+export default Banner;

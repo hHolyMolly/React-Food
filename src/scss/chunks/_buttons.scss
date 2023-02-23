@@ -1,0 +1,161 @@
+// .button
+.button {
+	padding: 0px 15px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 6px;
+
+	@extend %unselectable;
+	text-decoration: none;
+
+	// .orange
+	&_orange {
+		min-height: 45px;
+		background-color: $colorOrange;
+
+		font-size: 16px;
+		stroke: $colorWhite;
+		color: $colorWhite;
+
+		@media (any-hover: hover) {
+			transition: background-color .2s ease .0s;
+
+			&:hover {
+				background-color: lighten($colorOrange, 5%);
+			}
+		}
+	}
+
+	// .white
+	&_white {
+		min-height: 45px;
+		box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+		background-color: $colorWhite;
+
+		font-size: 16px;
+		stroke: $colorDark;
+		color: $colorDark;
+
+		@media (any-hover: hover) {
+			transition: background-color .2s ease .0s;
+
+			&:hover {
+				background-color: darken($colorWhite, 8%);
+			}
+		}
+	}
+}
+
+// ._burger
+._burger {
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 6px;
+	background-color: transparent;
+
+	span {
+		width: 25px;
+		height: 3px;
+		position: relative;
+		border-radius: 6px;
+		transition: background-color 0.2s ease-in-out 0s;
+		background-color: $colorDark;
+
+		&:before,
+		&:after {
+			content: "";
+			width: 25px;
+			height: 3px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			border-radius: 6px;
+			transition: background-color 0.2s ease-in-out 0s, transform 0.2s ease-in-out 0s;
+			background-color: $colorDark;
+		}
+
+		&:before {
+			top: -8px;
+		}
+
+		&:after {
+			top: 8px;
+		}
+	}
+
+	&._active {
+		span {
+			background-color: transparent;
+
+			&:before {
+				transform: rotate(45deg) translate(5px, 6px);
+			}
+
+			&:after {
+				transform: rotate(-45deg) translate(5px, -6px);
+			}
+		}
+	}
+
+	@media (any-hover: hover) {
+		transition: background-color .2s ease .0s;
+
+		&:hover {
+			background-color: $colorOrangeHover;
+		}
+	}
+}
+
+// ._close
+._close {
+	width: 30px;
+	height: 30px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-color: transparent;
+
+	&:before,
+	&:after {
+		content: "";
+		width: 20px;
+		height: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		background-color: $colorGrey;
+	}
+
+	&:before {
+		transform: rotate(45deg);
+	}
+
+	&:after {
+		transform: rotate(-45deg);
+	}
+
+	@media (any-hover: hover) {
+
+		&:before,
+		&:after {
+			transition: background-color .2s ease .0s;
+		}
+
+		&:hover {
+
+			&:before,
+			&:after {
+				background-color: $colorDark;
+			}
+		}
+	}
+}

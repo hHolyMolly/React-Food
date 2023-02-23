@@ -1,0 +1,251 @@
+.search {
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+
+	&:not(:last-child) {
+		@include adaptiv-value("margin-right", 30, 10, 1);
+	}
+
+	// .search__icon
+
+	&__icon {
+		flex: 0 0 45px;
+		min-height: 43px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+
+		stroke: $colorGrey;
+	}
+
+	// .search__item
+
+	&__item {
+		margin-right: -1px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+		border-radius: 6px 0px 0px 6px;
+		border: 1px solid $colorBorderGrey;
+
+		@media (max-width: 479.98px) {
+			border-radius: 6px;
+		}
+	}
+
+	// .search__input
+
+	&__input {
+		width: 100%;
+		flex: 1 1 auto;
+		min-height: 43px;
+
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 17 / 14 * 100%;
+
+		&::placeholder {
+			color: $colorGrey;
+		}
+
+		@media (max-width: 479.98px) {
+			padding: 0px 10px;
+			border-radius: 6px;
+		}
+	}
+
+	// .search__clear
+
+	&__clear {
+		width: 45px;
+		min-height: 43px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: $colorWhite;
+
+		&:before,
+		&:after {
+			width: 14px;
+			transition: background-color .2s ease .0s;
+			background-color: $colorGrey;
+		}
+
+		@media (max-width: 479.98px) {
+			border-radius: 6px;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+
+				&:before,
+				&:after {
+					background-color: $colorDark;
+				}
+			}
+		}
+	}
+
+	// .search__dropdown
+
+	&__dropdown {
+		padding: 15px;
+		margin-top: 10px;
+		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		border-radius: 6px;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(10%);
+		filter: drop-shadow(0px 6px 14px rgba(0, 0, 0, 0.2));
+		border: 1px solid $colorBorderGrey;
+		background-color: $colorWhite;
+
+		// .search-dropdown._active
+
+		&._active {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translateY(0%);
+		}
+	}
+
+	// .search__send
+
+	&__send {
+		@include adaptiv-value("padding-right", 15, 10, 1);
+		@include adaptiv-value("padding-left", 15, 10, 1);
+		border-radius: 0px 6px 6px 0px;
+
+		@include adaptiv-value("font-size", 16, 14, 1);
+	}
+}
+
+.search-dropdown {
+
+	// .search-dropdown__list
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .search-dropdown__item
+
+	&__item {
+
+		// .search-dropdown__item_empty
+
+		&_empty {
+			padding: 10px;
+
+			font-size: 14px;
+
+			color: $colorGrey;
+		}
+	}
+}
+
+.search-dropdown-product {
+	overflow: hidden;
+	border-radius: 6px;
+	border: 1px solid $colorBorderGrey;
+
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
+
+	@media (any-hover: hover) {
+		transition: border-color .2s ease .0s;
+
+		&:hover {
+			border-color: $colorGrey;
+		}
+	}
+
+	// .search-dropdown-product__link
+
+	&__link {
+		padding: 10px;
+		display: flex;
+		align-items: center;
+
+		text-decoration: none;
+	}
+
+	// .search-dropdown-product__image
+
+	&__image {
+		@include adaptiv-value("flex-basis", 80, 60, 1);
+		flex-shrink: 0;
+		flex-grow: 0;
+		overflow: hidden;
+		border-radius: 6px;
+
+		img {
+			max-width: 100%;
+		}
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+
+	// .search-dropdown-product__row
+
+	&__row {
+		display: flex;
+		flex-direction: column
+	}
+
+	// .search-dropdown-product__title
+
+	&__title {
+		-webkit-line-clamp: 1;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+
+		@include adaptiv-value("font-size", 18, 16, 1);
+		font-weight: 600;
+		line-height: 22 / 18 * 100%;
+		color: $colorDark;
+
+		&:not(:last-child) {
+			margin-bottom: 5px
+		}
+	}
+
+	// .search-dropdown-product__text
+
+	&__text {
+		flex: 1 1 auto;
+
+		-webkit-line-clamp: 2;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+
+		@include adaptiv-value("font-size", 14, 12, 1);
+		font-weight: 400;
+		line-height: 17 / 14 * 100%;
+		color: $colorGrey;
+
+		&:not(:last-child) {
+			margin-bottom: 10px
+		}
+	}
+
+	// .search-dropdown-product__price
+
+	&__price {
+		@include adaptiv-value("font-size", 16, 14, 1);
+		font-weight: 600;
+		line-height: 19 / 16 * 100%;
+		color: $colorDark;
+	}
+}

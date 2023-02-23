@@ -1,0 +1,91 @@
+.banner {
+	position: relative;
+	z-index: 100;
+	border-bottom: 1px solid $colorBorderGrey;
+	background-color: $colorWhite;
+
+	@media (max-width: 767.98px) {
+		display: none;
+	}
+
+	// .banner__container
+
+	&__container {
+		max-width: 1130px;
+	}
+
+	// .banner__body
+
+	&__body {
+		min-height: 50px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .banner__phone
+
+	&__phone {
+		display: inline-flex;
+		align-items: center;
+
+		text-decoration: none;
+
+		@media (any-hover: hover) {
+			.banner-phone__icon {
+				path {
+					transition: stroke .2s ease .0s;
+				}
+			}
+
+			.banner-phone__text {
+				transition: color .2s ease .0s;
+			}
+
+			&:hover {
+				.banner-phone__icon {
+					path {
+						stroke: $colorOrange;
+					}
+				}
+
+				.banner-phone__text {
+					color: $colorOrange;
+				}
+			}
+		}
+	}
+
+	// .banner__work
+
+	&__work {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 19 / 16 * 100%;
+	}
+}
+
+.banner-phone {
+
+	// .banner-phone__icon
+
+	&__icon {
+		path {
+			stroke: $colorDark;
+			stroke-width: 1.2px;
+		}
+
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+
+	// .banner-phone__text
+
+	&__text {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 17 / 14 * 100%;
+		color: $colorDark;
+	}
+}

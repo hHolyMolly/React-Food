@@ -1,0 +1,102 @@
+.category-filter {
+	position: relative;
+
+	// .category-filter__button
+
+	&__button {
+		padding: 0px 15px;
+		min-height: 35px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 6px;
+		border: 1px solid $colorBorderGrey;
+		transition: border-color .2s ease .0s;
+		background-color: transparent;
+
+		&._active {
+			border-color: $colorGrey;
+		}
+	}
+
+	// .category-filter__button-icon
+
+	&__button-icon {
+		width: 15px;
+		height: 15px;
+
+		stroke: $colorOrange;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	// .category-filter__button-text
+
+	&__button-text {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20 / 16 * 100%;
+		color: $colorDark;
+	}
+
+	// .category-filter__dropdown
+
+	&__dropdown {
+		margin-top: 10px;
+		padding: 10px;
+		min-width: 220px;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		z-index: 5;
+		overflow: hidden;
+		opacity: 0;
+		pointer-events: none;
+		border-radius: 8px;
+		transition: opacity .2s ease .0s, transform .2s ease .0s;
+		transform: translateY(5%);
+		filter: drop-shadow(0px 6px 14px rgba(0, 0, 0, 0.15));
+		background-color: $colorWhite;
+
+		&._active {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translateY(0%);
+		}
+	}
+
+	// .category-filter__item
+
+	&__item {
+		padding: 5px 10px;
+		width: 100%;
+		min-height: 40px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		cursor: pointer;
+		border-radius: 6px;
+
+		font-size: 14px;
+
+		&:not(:last-child) {
+			margin-bottom: 6px;
+		}
+
+		&._active {
+			background-color: $colorOrangeHover;
+
+			color: $colorOrange;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $colorOrangeHover;
+
+				color: $colorOrange;
+			}
+		}
+	}
+}
