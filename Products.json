@@ -4,13 +4,13 @@
 		"title": "Гавайская",
 		"images": [
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			}
 		],
 		"contain": "Помидор, сыр моцарелла, сыр пармезан, куриное филе, ананас, сырный соус, руккола",
@@ -36,19 +36,19 @@
 		"title": "5 сыров",
 		"images": [
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			},
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			}
 		],
 		"contain": "Cоус помодоро, сыр моцарелла, сыр пармезан, сыр рокфор, сыр фета, сыр радомер",
@@ -74,19 +74,19 @@
 		"title": "Маргарита",
 		"images": [
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			}
 		],
 		"contain": "Помидор, соус помодоро, сыр моцарелла, сыр пармезан, чесночный соус, базилик, приправа «смесь 5 перцев»",
@@ -111,19 +111,19 @@
 		"title": "Супер мясо",
 		"images": [
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			}
 		],
 		"contain": "Сыр моцарелла, бекон, ростбиф из телятины, салями, колбаски охотничьи, куриное филе, ветчина",
@@ -149,19 +149,19 @@
 		"title": "Вегетарианская",
 		"images": [
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			},
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			}
 		],
 		"contain": "Cыр фета, помидор, перец болгарский, грибы шампиньоны, соус помодоро, сыр моцарелла, маслины, лук 'марс'",
@@ -187,19 +187,19 @@
 		"title": "Халапеньо",
 		"images": [
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			},
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			}
 		],
 		"contain": "Cоус помодоро, сыр моцарелла, салями, перец халопеньо",
@@ -225,19 +225,19 @@
 		"title": "Филадельфия",
 		"images": [
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			}
 		],
 		"contain": "Лосось атлантический, авокадо, огурец, сыр филадельфия, рис японский",
@@ -263,19 +263,19 @@
 		"title": "Филадельфия с соусом",
 		"images": [
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			},
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			},
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			}
 		],
 		"contain": "Лосось атлантический, авокадо, огурец, сыр филадельфия, рис японский",
@@ -301,19 +301,19 @@
 		"title": "Филадельфия классик",
 		"images": [
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			},
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			}
 		],
 		"contain": "Лосось атлантический, авокадо, огурец, сыр филадельфия, рис японский",
@@ -339,19 +339,19 @@
 		"title": "Запеченый ролл",
 		"images": [
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			},
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			}
 		],
 		"contain": "Лосось атлантический, авокадо, огурец, сыр филадельфия, рис японский",
@@ -377,19 +377,19 @@
 		"title": "Филадельфия Супер",
 		"images": [
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			},
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			},
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			},
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			},
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			}
 		],
 		"contain": "Лосось атлантический, авокадо, огурец, сыр филадельфия, рис японский",
@@ -415,7 +415,7 @@
 		"title": "Пепси классик",
 		"images": [
 			{
-				"imageUrl": "01.jpg"
+				"imageUrl": "01.webp"
 			}
 		],
 		"category": "drink",
@@ -440,7 +440,7 @@
 		"title": "Миринда",
 		"images": [
 			{
-				"imageUrl": "02.jpg"
+				"imageUrl": "02.webp"
 			}
 		],
 		"category": "drink",
@@ -465,7 +465,7 @@
 		"title": "Адреналин",
 		"images": [
 			{
-				"imageUrl": "03.jpg"
+				"imageUrl": "03.webp"
 			}
 		],
 		"category": "drink",
@@ -490,7 +490,7 @@
 		"title": "Пепси без сахара",
 		"images": [
 			{
-				"imageUrl": "04.jpg"
+				"imageUrl": "04.webp"
 			}
 		],
 		"category": "drink",
@@ -515,7 +515,7 @@
 		"title": "Пепси Cherry",
 		"images": [
 			{
-				"imageUrl": "05.jpg"
+				"imageUrl": "05.webp"
 			}
 		],
 		"category": "drink",
