@@ -15,4 +15,4 @@ REACT FOOD - это мной лично разработанный проект,
 - Swiper;
 - Lodash;
 
-(./public/img/logo.svg)
+!(./public/img/logo.svg)
