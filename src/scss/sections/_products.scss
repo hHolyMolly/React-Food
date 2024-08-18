@@ -1,0 +1,135 @@
+.products-section {
+  &:not(:last-child) {
+    @include adaptiv-value("margin-bottom", 80, 50, 1);
+  }
+
+  .swiper {
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 40px;
+      height: 40px;
+
+      &:before {
+        width: 9px;
+        height: 16px;
+      }
+    }
+
+    .swiper-button-disabled {
+      opacity: 0;
+    }
+  }
+
+  // .products-section__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .products-section__top
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .products-section__row
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  // .products-section__filter
+
+  &__filter {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+
+    font-weight: 500;
+    line-height: 18 / 16 * 100%;
+    color: $colorGrey;
+
+    svg {
+      margin-right: 6px;
+      width: 16px;
+      height: 18px;
+
+      stroke-width: 2px;
+      stroke: $colorGrey;
+    }
+
+    @media (max-width: 479.98px) {
+      font-size: 14px;
+    }
+
+    @media (any-hover: hover) {
+      transition: color 0.2s ease 0s;
+
+      svg {
+        transition: stroke 0.2s ease 0s;
+      }
+
+      &:hover {
+        color: $colorDark;
+
+        svg {
+          stroke: $colorDark;
+        }
+      }
+    }
+  }
+
+  // .products-section__title
+
+  &__title {
+    @include adaptiv-value("font-size", 28, 24, 1);
+    font-weight: 600;
+    line-height: 34px;
+    color: $colorDark;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  // .products-section__items
+
+  &__items {
+    gap: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media (max-width: 1199.98px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 991.98px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768.98px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 479.98px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

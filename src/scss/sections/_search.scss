@@ -1,0 +1,36 @@
+.search-empty {
+	@include adaptiv-value("padding-top", 60, 30, 1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	// .search-empty__emoji
+
+	&__emoji {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		font-size: 44px;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	// .search-empty__text
+
+	&__text {
+		text-align: center;
+		color: $colorGrey;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	// .search-empty__back
+
+	&__back {}
+}
