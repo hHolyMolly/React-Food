@@ -1,28 +1,28 @@
 {
   "files": {
     "main.css": "/React-Food/static/css/main.22035e3c.css",
-    "main.js": "/React-Food/static/js/main.5a929cb2.js",
-    "static/js/264.fee22212.chunk.js": "/React-Food/static/js/264.fee22212.chunk.js",
-    "static/js/659.ee66f44f.chunk.js": "/React-Food/static/js/659.ee66f44f.chunk.js",
-    "static/js/341.b395948b.chunk.js": "/React-Food/static/js/341.b395948b.chunk.js",
-    "static/js/189.0acfa8c4.chunk.js": "/React-Food/static/js/189.0acfa8c4.chunk.js",
-    "static/js/913.393513ef.chunk.js": "/React-Food/static/js/913.393513ef.chunk.js",
-    "static/js/120.17511f4a.chunk.js": "/React-Food/static/js/120.17511f4a.chunk.js",
-    "static/js/44.ffffb65d.chunk.js": "/React-Food/static/js/44.ffffb65d.chunk.js",
+    "main.js": "/React-Food/static/js/main.7d753aa7.js",
+    "static/js/264.1f45b080.chunk.js": "/React-Food/static/js/264.1f45b080.chunk.js",
+    "static/js/659.ac32dc32.chunk.js": "/React-Food/static/js/659.ac32dc32.chunk.js",
+    "static/js/341.52ce2f7e.chunk.js": "/React-Food/static/js/341.52ce2f7e.chunk.js",
+    "static/js/189.e51441cc.chunk.js": "/React-Food/static/js/189.e51441cc.chunk.js",
+    "static/js/913.d1190152.chunk.js": "/React-Food/static/js/913.d1190152.chunk.js",
+    "static/js/120.93678446.chunk.js": "/React-Food/static/js/120.93678446.chunk.js",
+    "static/js/44.f21b5d1f.chunk.js": "/React-Food/static/js/44.f21b5d1f.chunk.js",
     "index.html": "/React-Food/index.html",
     "static/media/arrow.svg": "/React-Food/static/media/arrow.ce7b825e73bf397318de.svg",
     "main.22035e3c.css.map": "/React-Food/static/css/main.22035e3c.css.map",
-    "main.5a929cb2.js.map": "/React-Food/static/js/main.5a929cb2.js.map",
-    "264.fee22212.chunk.js.map": "/React-Food/static/js/264.fee22212.chunk.js.map",
-    "659.ee66f44f.chunk.js.map": "/React-Food/static/js/659.ee66f44f.chunk.js.map",
-    "341.b395948b.chunk.js.map": "/React-Food/static/js/341.b395948b.chunk.js.map",
-    "189.0acfa8c4.chunk.js.map": "/React-Food/static/js/189.0acfa8c4.chunk.js.map",
-    "913.393513ef.chunk.js.map": "/React-Food/static/js/913.393513ef.chunk.js.map",
-    "120.17511f4a.chunk.js.map": "/React-Food/static/js/120.17511f4a.chunk.js.map",
-    "44.ffffb65d.chunk.js.map": "/React-Food/static/js/44.ffffb65d.chunk.js.map"
+    "main.7d753aa7.js.map": "/React-Food/static/js/main.7d753aa7.js.map",
+    "264.1f45b080.chunk.js.map": "/React-Food/static/js/264.1f45b080.chunk.js.map",
+    "659.ac32dc32.chunk.js.map": "/React-Food/static/js/659.ac32dc32.chunk.js.map",
+    "341.52ce2f7e.chunk.js.map": "/React-Food/static/js/341.52ce2f7e.chunk.js.map",
+    "189.e51441cc.chunk.js.map": "/React-Food/static/js/189.e51441cc.chunk.js.map",
+    "913.d1190152.chunk.js.map": "/React-Food/static/js/913.d1190152.chunk.js.map",
+    "120.93678446.chunk.js.map": "/React-Food/static/js/120.93678446.chunk.js.map",
+    "44.f21b5d1f.chunk.js.map": "/React-Food/static/js/44.f21b5d1f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.22035e3c.css",
-    "static/js/main.5a929cb2.js"
+    "static/js/main.7d753aa7.js"
   ]
 }
