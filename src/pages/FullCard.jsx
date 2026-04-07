@@ -9,7 +9,7 @@ import { Products } from "../components/sections";
 
 import instance from "../instance";
 
-import { Button } from "../components/chuncks";
+import { Button, FullCardLoading } from "../components/chuncks";
 import { setAddProductToBasket } from "../redux/slices/basket";
 import {
   setAddProductToFavorite,
@@ -227,7 +227,7 @@ function FullCard() {
         <div className="_container">
           <div className="full-card__body">
             {product === null ? (
-              <></>
+              <FullCardLoading />
             ) : (
               <div className="full-card__main full-card-main">
                 {mobileCard && (
