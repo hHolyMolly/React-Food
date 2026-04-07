@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,10 +22,11 @@ function Search({ isPhone }) {
   const inputRef = React.useRef();
   const searchRef = React.useRef();
 
-  const onInputChange = useCallback(
-    debounce((e) => {
+  const onInputChange = useMemo(
+    () => debounce((e) => {
       setSearchValue(e.target.value);
-    }, 300)
+    }, 300),
+    []
   );
 
   const onInputCloseSearch = useCallback((e) => {
@@ -35,11 +36,11 @@ function Search({ isPhone }) {
       setSearchOpened(false);
       dispatch(setIsSearchOpen(false));
     }
-  });
+  }, [dispatch]);
 
   const onInputFocus = useCallback((e) => {
     e.target.value.length > 0 ? dispatch(setIsSearchOpen(true)) : dispatch(setIsSearchOpen(false));
-  });
+  }, [dispatch]);
 
   const onSearchSubmit = (e) => {
     e.preventDefault();
@@ -103,7 +104,7 @@ function Search({ isPhone }) {
   }, [searchValue]);
 
   return (
-    <form className="search" onSubmit={(e) => onSearchSubmit(e)} method="get" autoComplete="off" ref={searchRef}>
+    <form className="search" onSubmit={(e) => onSearchSubmit(e)} method="get" autoComplete="off" ref={searchRef} role="search" aria-label="Поиск товаров">
       <div className="search__item">
         {!isPhone && (
           <label className="search__icon" htmlFor="main-search">
@@ -131,7 +132,7 @@ function Search({ isPhone }) {
           autoComplete="off"
           ref={inputRef}
         />
-        {searchOpened && <button className="search__clear _close" onClick={onClearSearch} type="button"></button>}
+        {searchOpened && <button className="search__clear _close" onClick={onClearSearch} type="button" aria-label="Очистить поиск"></button>}
         <div className={classNames("search__dropdown search-dropdown", isActive && "_active")}>
           <ul className="search-dropdown__list">
             {itemsDropdown && itemsDropdown.length > 0 ? (

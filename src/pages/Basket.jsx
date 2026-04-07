@@ -4,12 +4,16 @@ import classNames from 'classnames';
 
 import { BasketCard, Button } from '../components/chuncks';
 import { setOpenedModal } from '../redux/slices/modals';
+import { lockBody } from '../utils/bodyLock';
 
 function Basket() {
 	const dispatch = useDispatch();
 	const { items, totalCount, totalPrice } = useSelector(({ basket }) => basket);
 
-	const clearBasket = () => dispatch(setOpenedModal('clear-basket'));
+	const clearBasket = () => {
+		dispatch(setOpenedModal('clear-basket'));
+		lockBody();
+	};
 
 	React.useEffect(() => {
 		window.scrollTo(0, 0);

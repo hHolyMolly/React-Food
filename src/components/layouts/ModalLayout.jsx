@@ -2,6 +2,7 @@ import classNames from "classnames";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setOpenedModal } from "../../redux/slices/modals";
+import { unlockBody } from "../../utils/bodyLock";
 
 function ModalLayout({ title = "Заголовок", children, className }) {
   const dispatch = useDispatch();
@@ -13,8 +14,7 @@ function ModalLayout({ title = "Заголовок", children, className }) {
     dispatch(setOpenedModal(false));
 
     setTimeout(() => {
-      document.body.style.paddingRight = "0px";
-      document.body.style.overflow = "auto";
+      unlockBody();
     }, 300);
   };
 
@@ -26,7 +26,7 @@ function ModalLayout({ title = "Заголовок", children, className }) {
     };
 
     const closeOnKey = (e) => {
-      if (e.code === "Escape") dispatch(setOpenedModal(false));
+      if (e.code === "Escape") closeModal();
     };
 
     document.body.addEventListener("click", onOutsideClick);
@@ -39,11 +39,11 @@ function ModalLayout({ title = "Заголовок", children, className }) {
   }, [isOpened]);
 
   return (
-    <div className={classNames("modal", className && `${className}`)}>
+    <div className={classNames("modal", className && `${className}`)} role="dialog" aria-modal="true" aria-label={title}>
       <div className="modal__body">
         <div className="modal__top modal-top">
-          <h5 className="modal-top__title">{title}</h5>
-          <button className="modal-top__close _close" onClick={closeModal} type="button"></button>
+          <h2 className="modal-top__title">{title}</h2>
+          <button className="modal-top__close _close" onClick={closeModal} type="button" aria-label="Закрыть"></button>
         </div>
         <div className="modal__content modal-content">{children}</div>
       </div>

@@ -8,6 +8,7 @@ import MenuContent from "./MenuContent";
 import { logoObj } from "../../../global";
 
 import { setHandleMenu } from "../../../redux/slices/menu";
+import { lockBody, unlockBody } from "../../../utils/bodyLock";
 
 function Menu() {
   const dispatch = useDispatch();
@@ -15,20 +16,12 @@ function Menu() {
 
   const setOpenMenu = React.useCallback(() => {
     dispatch(setHandleMenu(true));
-
-    const paddingValue = window.innerWidth - document.querySelector("#root").offsetWidth + "px";
-
-    document.body.style.paddingRight = paddingValue;
-
-    document.body.style.overflow = "hidden";
+    lockBody();
   }, []);
 
   const setCloseMenu = React.useCallback(() => {
     dispatch(setHandleMenu(false));
-
-    document.body.style.paddingRight = "0px";
-
-    document.body.style.overflow = "auto";
+    unlockBody();
   }, []);
 
   React.useEffect(() => {
@@ -47,19 +40,19 @@ function Menu() {
 
   return (
     <nav className="menu">
-      <button className="menu__burger _burger" onClick={setOpenMenu}>
+      <button className="menu__burger _burger" onClick={setOpenMenu} aria-label="Открыть меню">
         <span></span>
       </button>
       <div className={classNames("menu__body", isActive && "_active")}>
         <div className="menu__top menu-top">
           <Link className="header__logo header-logo menu-top__logo" onClick={setCloseMenu} to="/">
-            <img className="header-logo__icon" width={48} height={48} src={logoObj.imageUrl} alt="Logo" />
+            <img className="header-logo__icon" width={48} height={48} src={logoObj.imageUrl} alt="REACT FOOD — Главная" />
             <div className="header-logo__row">
               <strong className="header-logo__title">{logoObj.title}</strong>
               <p className="header-logo__text">{logoObj.text}</p>
             </div>
           </Link>
-          <button className="menu-top__close _close" onClick={setCloseMenu} type="button"></button>
+          <button className="menu-top__close _close" onClick={setCloseMenu} type="button" aria-label="Закрыть меню"></button>
         </div>
         <MenuContent setCloseMenu={setCloseMenu} />
       </div>

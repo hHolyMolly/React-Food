@@ -66,7 +66,7 @@ function Header() {
               <>
                 <Menu />
                 <Link className="header__logo header-logo" to="/">
-                  <img className="header-logo__icon" width={48} height={48} src={logoObj.imageUrl} alt="Logo" />
+                  <img className="header-logo__icon" width={48} height={48} src={logoObj.imageUrl} alt="REACT FOOD — Главная" />
                   {!isTablet && (
                     <div className="header-logo__row">
                       <strong className="header-logo__title">{logoObj.title}</strong>
@@ -101,7 +101,7 @@ function Header() {
               <ul className="header__actions header-actions">
                 {!isPhone && (
                   <li className="header-actions__item">
-                    <Link className="header-actions__link" to="/favorite">
+                    <Link className="header-actions__link" to="/favorite" aria-label="Избранное">
                       <i className="header-actions__icon">
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -116,7 +116,7 @@ function Header() {
                   </li>
                 )}
                 <li className="header-actions__item">
-                  <Link className="header-actions__link" to="/basket">
+                  <Link className="header-actions__link" to="/basket" aria-label="Корзина">
                     <i className="header-actions__icon">
                       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

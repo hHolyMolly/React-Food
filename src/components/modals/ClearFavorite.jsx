@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 import { setClearFavorite } from '../../redux/slices/favorite';
 import { setOpenedModal } from '../../redux/slices/modals';
+import { unlockBody } from '../../utils/bodyLock';
 
 import ModalLayout from '../layouts/ModalLayout';
 
@@ -24,8 +25,7 @@ function ClearFavorite({
 		dispatch(setOpenedModal(false));
 
 		setTimeout(() => {
-			document.body.style.paddingRight = "0px";
-			document.body.style.overflow = "auto";
+			unlockBody();
 		}, 300);
 	};
 

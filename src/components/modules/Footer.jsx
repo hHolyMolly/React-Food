@@ -9,7 +9,7 @@ function Footer() {
       <div className="_container">
         <div className="footer__body">
           <Link className="footer__logo footer-logo" to="/">
-            <img className="footer-logo__icon" width={48} height={48} src={logoObj.imageUrl} alt="Logo" />
+            <img className="footer-logo__icon" width={48} height={48} src={logoObj.imageUrl} alt="REACT FOOD — Главная" />
             <strong className="footer-logo__title">{logoObj.title}</strong>
             <p className="footer-logo__text">{logoObj.text}</p>
           </Link>

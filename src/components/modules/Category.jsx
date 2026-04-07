@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { setFiltersCategory, setOpenedCategory } from '../../redux/slices/categories';
+import { unlockBody } from '../../utils/bodyLock';
 
 const categoryArr = [
 	{ imageUrl: "01.svg", title: "Роллы", url: "category/sushi" },
@@ -18,10 +19,7 @@ function Category() {
 
 	const onCloseDropdown = () => {
 		dispatch(setOpenedCategory(false));
-
-		document.body.style.paddingRight = "0px";
-
-		document.body.style.overflow = "auto";
+		unlockBody();
 	};
 
 	const selectCategory = () => {
@@ -52,7 +50,7 @@ function Category() {
 		>
 			<div className="category-dropdown__header category-dropdown-header">
 				<h2 className="category-dropdown-header__title">Категории</h2>
-				<button className="category-dropdown-header__close _close" onClick={onCloseDropdown} type="close"></button>
+				<button className="category-dropdown-header__close _close" onClick={onCloseDropdown} type="button" aria-label="Закрыть категории"></button>
 			</div>
 			<ul className="category-dropdown__content category-dropdown-content">
 				{categoryArr.map((category, idx) => (

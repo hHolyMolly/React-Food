@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 import { setClearBasket } from '../../redux/slices/basket';
 import { setOpenedModal } from '../../redux/slices/modals';
+import { unlockBody } from '../../utils/bodyLock';
 
 import ModalLayout from '../layouts/ModalLayout';
 
@@ -24,8 +25,7 @@ function ClearBasket({
 		dispatch(setOpenedModal(false));
 
 		setTimeout(() => {
-			document.body.style.paddingRight = "0px";
-			document.body.style.overflow = "auto";
+			unlockBody();
 		}, 300);
 	};
 

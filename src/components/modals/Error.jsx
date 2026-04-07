@@ -9,8 +9,13 @@ function Error({
 	const { isOpened } = useSelector(({ modals }) => modals);
 
 	return (
-		<ModalLayout className={thisModal === isOpened ? "_active" : ""}>
-			asd
+		<ModalLayout title="Ошибка" className={thisModal === isOpened ? "_active" : ""}>
+			<div className="modal-clear__column">
+				<span className="modal-clear__emoji">😔</span>
+				<p className="modal-clear__text">
+					Произошла ошибка. Пожалуйста, попробуйте позже.
+				</p>
+			</div>
 		</ModalLayout>
 	);
 }

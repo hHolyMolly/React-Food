@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -7,10 +7,24 @@ import { setLoadFavorite } from "./redux/slices/favorite";
 
 import MainLayout from "./components/layouts/MainLayout";
 
-import { Home, Basket, Favorite, Search, Category, FullCard, NotFound } from "./pages";
+const Home = lazy(() => import("./pages/Home"));
+const Basket = lazy(() => import("./pages/Basket"));
+const Favorite = lazy(() => import("./pages/Favorite"));
+const Search = lazy(() => import("./pages/Search"));
+const Category = lazy(() => import("./pages/Category"));
+const FullCard = lazy(() => import("./pages/FullCard"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
-const userBasket = JSON.parse(localStorage.getItem("user-basket") || "[]");
-const userFavorite = JSON.parse(localStorage.getItem("user-favorite") || "[]");
+const getLocalStorage = (key) => {
+  try {
+    return JSON.parse(localStorage.getItem(key) || "[]");
+  } catch {
+    return [];
+  }
+};
+
+const userBasket = getLocalStorage("user-basket");
+const userFavorite = getLocalStorage("user-favorite");
 
 function App() {
   const dispatch = useDispatch();
@@ -34,21 +48,23 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
+    <Suspense fallback={<div className="page-loading" />}>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
 
-        <Route path="/favorite" element={<Favorite />} />
-        <Route path="/basket" element={<Basket />} />
+          <Route path="/favorite" element={<Favorite />} />
+          <Route path="/basket" element={<Basket />} />
 
-        <Route path="/search" element={<Search />} />
+          <Route path="/search" element={<Search />} />
 
-        <Route path="/category/:category" element={<Category />} />
-        <Route path="/category/:category/:id" element={<FullCard />} />
+          <Route path="/category/:category" element={<Category />} />
+          <Route path="/category/:category/:id" element={<FullCard />} />
 
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }
 

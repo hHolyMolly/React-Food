@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { setOpenedModal } from '../redux/slices/modals';
 import { setAddProductToBasket, setAlertBasket } from '../redux/slices/basket';
+import { lockBody } from '../utils/bodyLock';
 
 import { Products } from '../components/sections';
 import { Button } from '../components/chuncks';
@@ -13,7 +14,10 @@ function Favorite() {
 	const { items: favoriteItems, totalCount, totalPrice } = useSelector(({ favorite }) => favorite);
 	const { items: basketItems } = useSelector(({ basket }) => basket);
 
-	const clearFavorite = () => dispatch(setOpenedModal('clear-favorite'));
+	const clearFavorite = () => {
+		dispatch(setOpenedModal('clear-favorite'));
+		lockBody();
+	};
 
 	const addAllProductToBasket = () => {
 		favoriteItems.forEach((item) => {

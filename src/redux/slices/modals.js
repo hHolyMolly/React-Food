@@ -10,12 +10,6 @@ const modalSlice = createSlice({
 	reducers: {
 		setOpenedModal(state, action) {
 			state.isOpened = action.payload;
-
-			const paddingValue = window.innerWidth - document.querySelector("#root").offsetWidth + "px";
-
-			document.body.style.paddingRight = paddingValue;
-
-			document.body.style.overflow = "hidden";
 		}
 	}
 });
