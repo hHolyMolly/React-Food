@@ -49,6 +49,9 @@ function PurchaseSuccess({
 				<Button className="modal-clear__button" onClick={onCloseModal} href="/" tag="Link" orange>
 					На главную
 				</Button>
+				<Button className="modal-clear__button" onClick={onCloseModal} orange>
+					Закрыть
+				</Button>
 			</div>
 		</ModalLayout>
 	);

@@ -12,13 +12,13 @@ function Button({ children, className, onClick, type = "button", tag = "button",
       )}
 
       {tag === "Link" && (
-        <Link className={classNames("button", className && `${className}`, orange && "button_orange", white && "button_white")} to={href}>
+        <Link className={classNames("button", className && `${className}`, orange && "button_orange", white && "button_white")} to={href} onClick={onClick}>
           {children}
         </Link>
       )}
 
       {tag === "a" && (
-        <a className={classNames("button", className && `${className}`, orange && "button_orange", white && "button_white")} href={href}>
+        <a className={classNames("button", className && `${className}`, orange && "button_orange", white && "button_white")} href={href} onClick={onClick}>
           {children}
         </a>
       )}

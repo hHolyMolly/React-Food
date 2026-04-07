@@ -9,12 +9,14 @@ function BasketAlert() {
   const { alert } = useSelector(({ basket }) => basket);
 
   React.useEffect(() => {
-    if (alert) {
-      setTimeout(() => {
-        dispatch(setAlertBasket(false));
-      }, 2000);
-    }
-  }, [alert]);
+    if (!alert) return;
+
+    const timerId = setTimeout(() => {
+      dispatch(setAlertBasket(false));
+    }, 2000);
+
+    return () => clearTimeout(timerId);
+  }, [alert, dispatch]);
 
   return (
     <Link className={classNames("basket-alert", alert && "_active")} to="/basket">
