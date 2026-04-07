@@ -15,6 +15,11 @@ function Basket() {
 		lockBody();
 	};
 
+	const purchaseOrder = () => {
+		dispatch(setOpenedModal('purchase-success'));
+		lockBody();
+	};
+
 	React.useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -63,7 +68,7 @@ function Basket() {
 										Сумма заказа:
 										<strong className="basket-footer__text_strong">{totalPrice}₴</strong>
 									</p>
-									<Button className="basket-footer__button" orange>
+									<Button className="basket-footer__button" onClick={purchaseOrder} orange>
 										Оформить заказ
 									</Button>
 								</div>

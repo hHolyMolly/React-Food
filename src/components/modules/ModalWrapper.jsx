@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Error, ClearBasket, ClearFavorite } from '../modals';
+import { Error, ClearBasket, ClearFavorite, PurchaseSuccess } from '../modals';
 
 function ModalWrapper() {
 	return (
@@ -13,6 +13,9 @@ function ModalWrapper() {
 			/>
 			<ClearFavorite
 				thisModal={"clear-favorite"}
+			/>
+			<PurchaseSuccess
+				thisModal={"purchase-success"}
 			/>
 		</div>
 	);

@@ -1,9 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import { setOpenedModal } from '../redux/slices/modals';
 import { setAddProductToBasket, setAlertBasket } from '../redux/slices/basket';
+import { setClearFavorite } from '../redux/slices/favorite';
 import { lockBody } from '../utils/bodyLock';
 
 import { Products } from '../components/sections';
@@ -11,6 +13,7 @@ import { Button } from '../components/chuncks';
 
 function Favorite() {
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 	const { items: favoriteItems, totalCount, totalPrice } = useSelector(({ favorite }) => favorite);
 	const { items: basketItems } = useSelector(({ basket }) => basket);
 
@@ -21,7 +24,6 @@ function Favorite() {
 
 	const addAllProductToBasket = () => {
 		favoriteItems.forEach((item) => {
-
 			const findItemBasket = basketItems.find((obj) => obj.parentId === item.id);
 
 			const itemBasket = {
@@ -37,9 +39,11 @@ function Favorite() {
 
 			if (!findItemBasket) {
 				dispatch(setAddProductToBasket(itemBasket));
-				dispatch(setAlertBasket(true));
-			};
-		})
+			}
+		});
+
+		dispatch(setClearFavorite());
+		navigate('/basket');
 	};
 
 	React.useEffect(() => {
@@ -87,7 +91,7 @@ function Favorite() {
 									<strong className="basket-footer__text_strong">{totalPrice}₴</strong>
 								</p>
 								<Button className="basket-footer__button" onClick={addAllProductToBasket} orange>
-									Купить все
+									Перенести в корзину
 								</Button>
 							</div>
 						</div>
